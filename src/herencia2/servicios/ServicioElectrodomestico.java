@@ -6,7 +6,7 @@ import herencia2.enumeraciones.ConsumoEnergetico;
 import herencia2.enumeraciones.ElectrodomesticoPeso;
 import java.util.Scanner;
 
-public class ServicioElectrodomesticos {
+public class ServicioElectrodomestico {
 
     Scanner input = new Scanner(System.in).useDelimiter("\n");
 
@@ -17,19 +17,19 @@ public class ServicioElectrodomesticos {
         System.out.println("Completa el formulario para el electrodoméstico:");
 
         
-        System.out.print("\n Color (blanco, negro, rojo, azul y gris.) >>");
+        System.out.print("\n Color (blanco, negro, rojo, azul y gris.) >> ");
         String color = comprobarColor(input.next());
 
-        System.out.print("\n Consumo Energético (A..F) >>");
+        System.out.print("\n Consumo Energético (A..F) >> ");
         
         char cons = input.next().charAt(0);
         ConsumoEnergetico consumoE = comprobarConsumoEnergetico(cons);
         
-        System.out.print("\n Peso en KG >>");
+        System.out.print("\n Peso en KG >> ");
         Double peso = input.nextDouble();
         while(peso<1){
             System.out.println("Ingrese un peso mayor o igual a 1KG");
-            System.out.print("\n Peso en KG >>");
+            System.out.print("\n Peso en KG >> ");
             peso = input.nextDouble();
         }
         
