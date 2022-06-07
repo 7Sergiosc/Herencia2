@@ -1,6 +1,6 @@
 package herencia2.enumeraciones;
 
-public enum color {
+public enum ElectrodomesticoColor {
     BLANCO ("Blanco"),
     NEGRO ("Negro"),
     ROJO ("Rojo"),
@@ -9,7 +9,7 @@ public enum color {
     
     private final String nombre;
 
-    private color(String nombre) {
+    private ElectrodomesticoColor(String nombre) {
         this.nombre = nombre;
     }
 

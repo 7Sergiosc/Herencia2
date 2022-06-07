@@ -1,6 +1,6 @@
 package herencia2.enumeraciones;
 
-public enum consumoEnergetico {
+public enum ConsumoEnergetico {
     A (1000d),
     B (800d),
     C (600d),
@@ -10,7 +10,7 @@ public enum consumoEnergetico {
     
     private final Double precio;
 
-    private consumoEnergetico(Double precio) {
+    private ConsumoEnergetico(Double precio) {
         this.precio = precio;
     }
 

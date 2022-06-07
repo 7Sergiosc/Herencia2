@@ -1,18 +1,18 @@
 package herencia2.entidades;
 
-import herencia2.enumeraciones.consumoEnergetico;
+import herencia2.enumeraciones.ConsumoEnergetico;
 
 public class Electrodomestico {
     //precio, color, consumo energético (letras entre A y F) y peso.
     protected Double precio;
     protected String color;
-    protected consumoEnergetico consumoEnergetico;
+    protected ConsumoEnergetico consumoEnergetico;
     protected Double peso;
 
     public Electrodomestico() {
     }
   
-    public Electrodomestico(Double precio, String color, consumoEnergetico consumoEnergetico, Double peso) {
+    public Electrodomestico(Double precio, String color, ConsumoEnergetico consumoEnergetico, Double peso) {
         this.precio = precio;
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
@@ -35,11 +35,11 @@ public class Electrodomestico {
         this.color = color;
     }
 
-    public consumoEnergetico getConsumoEnergetico() {
+    public ConsumoEnergetico getConsumoEnergetico() {
         return consumoEnergetico;
     }
 
-    public void setConsumoEnergetico(consumoEnergetico consumoEnergetico) {
+    public void setConsumoEnergetico(ConsumoEnergetico consumoEnergetico) {
         this.consumoEnergetico = consumoEnergetico;
     }
 
