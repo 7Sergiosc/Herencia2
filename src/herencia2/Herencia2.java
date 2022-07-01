@@ -1,18 +1,20 @@
 package herencia2;
 
-import herencia2.entidades.Electrodomestico;
 import herencia2.entidades.Lavadora;
-import herencia2.servicios.ServicioElectrodomestico;
+import herencia2.entidades.Televisor;
 import herencia2.servicios.ServicioLavadora;
+import herencia2.servicios.ServicioTelevisor;
 
 public class Herencia2 {
 
     public static void main(String[] args) {
-        ServicioElectrodomestico se = new ServicioElectrodomestico();
         ServicioLavadora sl = new ServicioLavadora();
-        Lavadora e = sl.crearLavadora();
+        Lavadora l = sl.crearLavadora();
         
-        System.out.println(e.toString());
+        ServicioTelevisor st = new ServicioTelevisor();
+        Televisor t = st.crearTelevisor();
+        
+        System.out.println(l.toString()+"\n"+t.toString());
     }
     
 }

@@ -40,7 +40,7 @@ public class ServicioElectrodomestico {
         return new Electrodomestico(precio, color, consumoE, peso);
     }
 
-    private ConsumoEnergetico comprobarConsumoEnergetico(char letra) {/*comprueba que la letra es correcta, sino es correcta usara la letra F por defecto. 
+    private ConsumoEnergetico comprobarConsumoEnergetico1(char letra) {/*comprueba que la letra es correcta, sino es correcta usara la letra F por defecto. 
     Este método se debe invocar al crear el objeto y no será visible.*/
         ConsumoEnergetico consumoE;
         switch (letra) {
@@ -66,6 +66,25 @@ public class ServicioElectrodomestico {
                 System.out.println("Eleccion errónea, se auto-completará con 'F'");
                 consumoE = ConsumoEnergetico.F;
         }
+        return consumoE;
+    }
+    
+    private ConsumoEnergetico comprobarConsumoEnergetico(char letra){
+        ConsumoEnergetico consumoE = ConsumoEnergetico.F;
+//        String letra12 = String.valueOf(Character.toUpperCase(letra));
+        String letra1 = Character.toString(Character.toUpperCase(letra)); 
+        
+        ConsumoEnergetico consumos[] = ConsumoEnergetico.values(); /*Convertir ENUM a ARRAY*/
+        for (int i = 0; i < consumos.length; i++) {
+            if (letra1.equalsIgnoreCase(consumos[i].toString())) {
+                consumoE = ConsumoEnergetico.valueOf(letra1);
+                break;
+            }else if(i==consumos.length-1){
+                System.out.println("Eleccion errónea, se auto-completará con 'F'");
+            }
+        }
+        
+                           
         return consumoE;
     }
 

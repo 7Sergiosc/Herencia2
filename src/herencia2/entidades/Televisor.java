@@ -19,6 +19,13 @@ public class Televisor extends Electrodomestico{
         this.pulgadas = pulgadas;
         this.sintonizadorTDT = sintonizadorTDT;
     }
-    
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString()).append("\nTipo: ");
+        sb.append("Televisor{" + "pulgadas=" + pulgadas + ", sintonizadorTDT=" + sintonizadorTDT + '}');
+        return sb.toString();
+    }
     
 }

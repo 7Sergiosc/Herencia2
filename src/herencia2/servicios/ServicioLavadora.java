@@ -3,15 +3,14 @@ package herencia2.servicios;
 import herencia2.entidades.Electrodomestico;
 import herencia2.entidades.Lavadora;
 import herencia2.enumeraciones.ConsumoEnergetico;
-import java.util.Scanner;
 
-public class ServicioLavadora {
-    ServicioElectrodomestico se = new ServicioElectrodomestico();
-    Scanner input = new Scanner(System.in).useDelimiter("\n");
+public class ServicioLavadora extends ServicioElectrodomestico{
     
     public Lavadora crearLavadora(){
-        Electrodomestico e = se.crearElectrodomestico();
-        System.out.print("Ingrese la carga de la lavadora>> "); Double carga = se.input.nextDouble();
+        Electrodomestico e = super.crearElectrodomestico();
+        
+        System.out.print("Ingrese la carga de la lavadora>> "); Double carga = super.input.nextDouble();
+        
         
         Double precio = precioFinal(carga, e.getPrecio(),e.getConsumoEnergetico(), e.getPeso());
         
