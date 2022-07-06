@@ -8,7 +8,7 @@ public class Electrodomestico {
     protected String color;
     protected ConsumoEnergetico consumoEnergetico;
     protected Double peso;
-
+    
     public Electrodomestico() {
     }
   
@@ -50,13 +50,9 @@ public class Electrodomestico {
     public void setPeso(Double peso) {
         this.peso = peso;
     }
-
+    
     @Override
     public String toString() {
         return "Electrodomestico{" + "precio=" + precio + ", color=" + color + ", consumoEnergetico=" + consumoEnergetico + ", peso=" + peso + '}';
     }
-    
-    
-    
-    
 }

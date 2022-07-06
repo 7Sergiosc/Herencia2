@@ -11,14 +11,18 @@ public class ServicioLavadora extends ServicioElectrodomestico{
         
         System.out.print("Ingrese la carga de la lavadora>> "); Double carga = super.input.nextDouble();
         
+        Lavadora l = new Lavadora(carga, e.getPrecio(), e.getColor(), e.getConsumoEnergetico(), e.getPeso());
         
-        Double precio = precioFinal(carga, e.getPrecio(),e.getConsumoEnergetico(), e.getPeso());
-        
-        return new Lavadora(carga, precio, e.getColor(), e.getConsumoEnergetico(), e.getPeso());
+        l.setPrecio(precioFinal(l));
+        return l;
     }
     
-    public Double precioFinal(Double carga, Double precio, ConsumoEnergetico consumo, Double peso){
-        if(carga>30d){return precio+500d;}else{return precio;}
+    /**
+     * Retorna precioFinal de un objeto tipo Lavadora mediante sus atributos: Double Precio, Double Carga.
+     * @param l 
+     * @return 
+     */
+    public Double precioFinal(Lavadora l){
+        if(l.getCarga()>30d){return super.precioFinal(l)+500d;}else{return super.precioFinal(l);}
     }
-    
 }

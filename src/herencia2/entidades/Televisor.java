@@ -20,6 +20,15 @@ public class Televisor extends Electrodomestico{
         this.sintonizadorTDT = sintonizadorTDT;
     }
 
+    public double getPulgadas() {
+        return pulgadas;
+    }
+
+    public boolean isSintonizadorTDT() {
+        return sintonizadorTDT;
+    }
+    
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
